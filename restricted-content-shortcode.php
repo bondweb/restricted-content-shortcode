@@ -18,12 +18,7 @@ License: GPL2
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
-/**
- * Adds the shortcode
- *
- * @uses add_shortcode
- * @return null
- */
+
 
 /**
  * Callback function for the shortcode.  Checks if a user is logged in.  If they
@@ -60,6 +55,13 @@ function restricted_content_shortcode_cb($args, $content=null)
     );
     return $msg;
 }
+
+/**
+ * Adds the shortcode
+ *
+ * @uses add_shortcode
+ * @return null
+ */
 
 function restricted_content_add_shortcode()
 {
