@@ -24,12 +24,7 @@ License: GPL2
  * @uses add_shortcode
  * @return null
  */
-function restricted_content_add_shortcode()
-{
-    add_shortcode('restricted', 'restricted_content_shortcode_cb');
-}
 
-add_action('init', 'restricted_content_add_shortcode');
 /**
  * Callback function for the shortcode.  Checks if a user is logged in.  If they
  * are, display the content.  If not, show them a link to the login form.
@@ -66,4 +61,9 @@ function restricted_content_shortcode_cb($args, $content=null)
     return $msg;
 }
 
+function restricted_content_add_shortcode()
+{
+    add_shortcode('restricted', 'restricted_content_shortcode_cb');
+}
 
+add_action('init', 'restricted_content_add_shortcode');
